@@ -13,8 +13,15 @@ describe('Creating records', ()=>{
     it('find a user', (done)=>{
         User.findOne({name: 'User1'})
         .then(result=>{
-            assert(result.name === 'User1');
             assert(user._id.equals(result._id));
+            done();
+        })
+    });
+
+    it('find a user with a particular id', (done)=>{
+        User.findOne({_id: user._id})
+        .then(result=>{
+            assert(result.name === 'User1');
             done();
         })
     });

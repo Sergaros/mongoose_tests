@@ -5,11 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "mocha": "^4.0.1",
-    "mongoose": "^4.13.2"
+    "mongoose": "^4.13.2",
+    "nodemon": "^1.12.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "mocha"
+    "test": "nodemon --exec \"mocha -R min\""
   },
   "keywords": [],
   "author": "",
